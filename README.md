@@ -1,8 +1,6 @@
 # ✅ Todo CLI — Task Management for Developers
 
-A simple CLI tool that lets you manage your pending tasks directly from the terminal.
-
-This project is a simple CLI that lets you handle your pending tasks like a real programmer, directly from the terminal. You don’t have to leave it anymore — your endless todo list stays in your work environment so you can keep working, day after day, until burnout feels inevitable.
+A simple CLI tool that lets you handle your pending tasks like a real programmer, directly from the terminal. You don’t have to leave it anymore — your endless todo list stays in your work environment so you can keep working, day after day, until burnout feels inevitable.
 
 ## 🧠 What is this?
 
