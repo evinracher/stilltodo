@@ -1,0 +1,21 @@
+{
+  "name": "todo-cli",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": {
+    "todo": "./src/index.js"
+  },
+  "description": "A simple CLI to manage your pending tasks from terminal",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node.js",
+    "javascript",
+    "npm",
+    "cli"
+  ],
+  "author": "evinracher",
+  "license": "ISC"
+}
