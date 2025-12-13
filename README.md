@@ -1,10 +1,10 @@
-# ✅ Todo CLI — Task Management for Developers
+# ✅ Stilltodo — Task Management for Developers
 
 A simple CLI tool that lets you handle your pending tasks like a real programmer, directly from the terminal. You don’t have to leave it anymore — your endless todo list stays in your work environment so you can keep working, day after day, until burnout feels inevitable.
 
 ## 🧠 What is this?
 
-**Todo CLI** is a lightweight command-line application built with **Node.js** for developers who spend most of their day in the terminal and want to manage tasks without leaving it.
+**Stilltodo** is a lightweight command-line application built with **Node.js** for developers who spend most of their day in the terminal and want to manage tasks without leaving it.
 
 ## ✨ Features
 
