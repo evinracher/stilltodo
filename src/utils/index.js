@@ -2,9 +2,12 @@ import { STATUS } from "../constants.js";
 
 export const formatTasks = (tasks) => {
   const formattedTasks = tasks.map((task, index) => {
+    const taskNumber = index + 1;
+    const formattedTaskNumber = taskNumber >= 10 ? taskNumber : ` ${taskNumber}`;
     const completed = task.status === STATUS.completed;
     const statusIcon = completed ? "\x1b[32m✓\x1b[0m" : " ";
-    return `${statusIcon} ${index + 1}. ${task.description}`;
+
+    return `${statusIcon} ${formattedTaskNumber}. ${task.description}`;
   });
   return formattedTasks.join("\n");
 };
