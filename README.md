@@ -6,27 +6,6 @@ A simple CLI tool that lets you handle your pending tasks like a real programmer
 
 **Stilltodo** is a lightweight command-line application built with **Node.js** for developers who spend most of their day in the terminal and want to manage tasks without leaving it.
 
-## ✨ Features
-
-- 🖥️ Manage tasks directly from the terminal
-- ⚡ Default command for quickly adding new tasks
-- 🔢 Simple numeric task completion
-- 📂 File-based persistence
-- 🧪 Basic unit tests
-- 📦 Modern ES Modules setup
-
-
-## 🛠️ Tech Stack & Key Packages
-
-### Runtime
-- **Node.js** (ES Modules enabled)
-
-### Main Packages
-- 📌 **yargs** — CLI command parsing and argument handling
-- 🧪 **jest** — Unit testing framework
-
-### Native Modules
-- 📁 `fs` — File system access for task persistence
 
 ## 🌍 Installation
 
@@ -86,6 +65,30 @@ todo complete <number>  complete task n° <number>
 todo clear              remove completed tasks
 ```
 
+
+## ✨ Features
+
+- 🖥️ Manage tasks directly from the terminal
+- ⚡ Default command for quickly adding new tasks
+- 🔢 Simple numeric task completion
+- 📂 File-based persistence
+- 🧪 Basic unit tests
+- 📦 Modern ES Modules setup
+
+
+## 🛠️ Tech Stack & Key Packages
+
+### Runtime
+- **Node.js** (ES Modules enabled)
+
+### Main Packages
+- 📌 **yargs** — CLI command parsing and argument handling
+- 🧪 **jest** — Unit testing framework
+
+### Native Modules
+- 📁 `fs` — File system access for task persistence
+
+
 ## Development
 
 ## 🔗 Install the CLI locally
@@ -95,6 +98,7 @@ To make the `todo` command available globally during development:
 ```bash
 npm link
 ```
+
 
 ## 🧪 Testing
 
