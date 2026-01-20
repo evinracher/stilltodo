@@ -8,7 +8,8 @@ export const getDB = async () => {
     const file = await fs.readFile(DB_URL, "utf-8");
     
     if (file?.trim()) {
-      return JSON.parse(file);
+      const db = JSON.parse(file);
+      return db;
     }
   } catch (error) {
     if (error?.code !== "ENOENT") {

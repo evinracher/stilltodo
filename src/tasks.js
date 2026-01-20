@@ -13,8 +13,7 @@ export const getTasks = async () => {
 export const completeTask = async (number) => {
   const taskIndex = number - 1;
   const tasks = await getTasks();
-
-  if (taskIndex >= tasks.length || taskIndex <= 0) {
+  if (taskIndex >= tasks.length || taskIndex < 0) {
     throw new Error("Task doesn't exist");
   }
 
