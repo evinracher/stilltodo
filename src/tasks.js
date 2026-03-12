@@ -1,5 +1,6 @@
 import { STATUS } from "./constants.js";
 import { saveDB, getDB } from "./db.js";
+import { convertDueDateToOrderNumber } from "./utils/index.js";
 
 const saveTasks = async (tasks) => {
   await saveDB({ tasks });
@@ -7,9 +8,15 @@ const saveTasks = async (tasks) => {
 
 export const getTasks = async () => {
   const db = await getDB();
-  return db.tasks;
+  const mappedTasks = db.tasks.map((tasks) => ({
+      ...tasks,
+      order: convertDueDateToOrderNumber(tasks.dueDate),
+    }))
+    .sort((a, b) => a.order - b.order);
+  return mappedTasks;
 };
 
+// TODO: improve complete and other methods to use and ID instead (could be using DBs capabilities)
 export const completeTask = async (number) => {
   const taskIndex = number - 1;
   const tasks = await getTasks();
@@ -31,14 +38,17 @@ export const clearTasks = async (all) => {
   }
 };
 
-export const addTask = async (description) => {
+export const addTask = async (description, dueDate) => {
+  const timestamp = new Date();
   const newTask = {
     description,
+    dueDate,
+    timestamp,
     status: STATUS.pending,
   };
   const tasks = await getTasks();
-  
+
   tasks.push(newTask);
-  
-  await saveTasks(tasks)
+
+  await saveTasks(tasks);
 };

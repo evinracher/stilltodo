@@ -1,5 +1,5 @@
 import { addTask, clearTasks, completeTask, getTasks } from "./tasks.js";
-import { printAllTasks } from "./utils/index.js";
+import { getDueDate, printAllTasks } from "./utils/index.js";
 
 const getAll = async (_) => {
   const tasks = await getTasks();
@@ -17,7 +17,9 @@ const complete = async (argv) => {
 };
 
 const add = async (argv) => {
-  await addTask(argv.description);
+  const dueDate = getDueDate(argv);
+  const description = argv.description
+  await addTask(description, dueDate);
   await getAll();
 };
 

@@ -115,8 +115,13 @@ npm test
 
 - 🗄️ Add database integration (replace file-based storage)
 - 🧪 Complete and expand the test suite
-- Add scope to the tasks (today, for the end of the week, for the end of the month)
+- Add due date to the tasks (today, for the end of the week, for the end of the month)
 
+-t: today (default)
+-w: this week
+-m: this month
+-y: this year
+-s: someday
 
 ## 🎯 Intended Audience
 

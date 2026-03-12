@@ -18,6 +18,32 @@ yargs(hideBin(process.argv))
       }),
     handlers.add,
   )
+  .option("today", {
+    alias: "t",
+    type: "boolean",
+    description: "the deadline for this task is today",
+    default: true,
+  })
+  .option("week", {
+    alias: "w",
+    type: "boolean",
+    description: "the deadline for this task is this week",
+  })
+  .option("month", {
+    alias: "m",
+    type: "boolean",
+    description: "the deadline for this task is this month",
+  })
+  .option("year", {
+    alias: "y",
+    type: "boolean",
+    description: "the deadline for this task is this year",
+  })
+  .option("someday", {
+    alias: "s",
+    type: "boolean",
+    description: "the deadline for this task is someday",
+  })
   .command("all", "get all tasks", () => {}, handlers.getAll)
   .command(
     "complete <number>",
