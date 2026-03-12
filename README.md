@@ -31,11 +31,22 @@ The CLI is exposed through the `todo` command.
 todo "Refactor legacy service"
 ```
 
+By default, tasks are set to be due **today**. You can specify different due dates:
+
+```bash
+todo "Review pull requests" --week    # Due this week
+todo "Plan Q2 roadmap" -m             # Due this month
+todo "Learn Rust" --year              # Due this year
+todo "Read that book" -s              # Someday
+```
+
 ### Get all tasks
 
 ```bash
 todo all
 ```
+
+Tasks are automatically sorted by due date (today → week → month → year → someday). Overdue tasks are displayed in **red**.
 
 ### Complete a task by its number
 
@@ -65,14 +76,33 @@ todo complete <number>  complete task n° <number>
 todo clear              remove completed tasks
 ```
 
+### Due Date Options (for `add` command)
+
+```bash
+-t, --today     Due today (default)
+-w, --week      Due this week
+-m, --month     Due this month
+-y, --year      Due this year
+-s, --someday   Someday (no specific deadline)
+```
+
+### Clear Command Options
+
+```bash
+-a, --all       Remove all tasks (not just completed ones)
+```
+
 
 ## ✨ Features
 
 - 🖥️ Manage tasks directly from the terminal
 - ⚡ Default command for quickly adding new tasks
+- � Due date management (today, week, month, year, someday)
+- 🔴 Overdue tasks highlighted in red
+- 📊 Automatic sorting by due date priority
 - 🔢 Simple numeric task completion
 - 📂 File-based persistence
-- 🧪 Basic unit tests
+- 🧪 Unit tests with Jest
 - 📦 Modern ES Modules setup
 
 
@@ -115,13 +145,6 @@ npm test
 
 - 🗄️ Add database integration (replace file-based storage)
 - 🧪 Complete and expand the test suite
-- Add due date to the tasks (today, for the end of the week, for the end of the month)
-
--t: today (default)
--w: this week
--m: this month
--y: this year
--s: someday
 
 ## 🎯 Intended Audience
 
