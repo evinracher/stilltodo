@@ -1,6 +1,6 @@
 {
   "name": "stilltodo",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "type": "module",
   "bin": {
     "todo": "src/index.js"
