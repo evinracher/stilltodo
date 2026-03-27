@@ -32,7 +32,7 @@ const isOverdue = (dueDate, timestamp) => {
     return dateDiff;
   }
 
-  if (dueDate === VALID_DUE_DATES.today) {
+  if (dueDate === VALID_DUE_DATES.week) {
     return dateDiff <= 7 && dateDiff >= 0;
   }
 
