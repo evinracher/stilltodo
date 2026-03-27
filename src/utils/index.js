@@ -33,7 +33,7 @@ const isOverdue = (dueDate, timestamp) => {
   }
 
   if (dueDate === VALID_DUE_DATES.week) {
-    return dateDiff <= 7 && dateDiff >= 0;
+    return dateDiff => 7 && dateDiff >= 0;
   }
 
   if (dueDate === VALID_DUE_DATES.month) {
