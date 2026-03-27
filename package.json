@@ -8,7 +8,8 @@
   "description": "A simple CLI to manage your pending tasks from terminal",
   "main": "./src/index.js",
   "scripts": {
-    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "prepare": "husky"
   },
   "keywords": [
     "node.js",
@@ -22,6 +23,7 @@
     "yargs": "^18.0.0"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
     "jest": "^30.2.0"
   }
 }

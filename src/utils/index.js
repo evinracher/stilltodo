@@ -19,10 +19,9 @@ export const convertDueDateToOrderNumber = (dueDate) => {
 };
 
 const getComparableDateNumber = (date) => {
-  const d = new Date(date);
-  const year = d.getFullYear();
-  const month = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
   return Number(`${year}${month}${day}`);
 }
 
@@ -31,10 +30,10 @@ const isOverdue = (dueDate, timestamp) => {
     return false;
   }
 
-  const currentTime = getComparableDateNumber(new Date());
-  const dueDateTime = getComparableDateNumber(timestamp);
+  const currentTime = new Date();
+  const dueDateTime = new Date(timestamp);
 
-  const dateDiff = currentTime - dueDateTime;
+  const dateDiff = getComparableDateNumber(currentTime) - getComparableDateNumber(dueDateTime);
 
   if (dueDate === VALID_DUE_DATES.today) {
     return Boolean(dateDiff);
